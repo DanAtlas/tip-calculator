@@ -1,0 +1,46 @@
+@import '../../styles/globals.scss';
+
+.tip-list-wrapper {
+  border: none;
+  margin: remify(40px) 0;
+  
+  .tip-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: remify(16px);
+    padding-left: 0;
+
+    @include respond-to(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .label {
+    font-size: remify(16px);
+    color: $sage;
+    margin: 0 0 remify(4px);
+    display: table;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .tip-button {
+    width: 100%;
+    height: remify(50px);
+    padding: remify(8px) remify(16px);
+    font-size: remify(20px);
+    background-color: $darkGreen;
+    color: $lightestGreen;
+    display: block;
+    border: 0;
+    border-radius: remify(4px);
+    text-align: center;
+    cursor: pointer;
+  
+    &:hover,
+    &--active {
+      background-color: $brandHover;
+      color: $darkGreen;
+    }
+  }
+}

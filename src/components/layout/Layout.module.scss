@@ -1,0 +1,43 @@
+@import '../../styles/globals.scss';
+
+.layout {
+  min-height: 100vh;
+  background-color: $lightGreen;
+  
+  .container {
+    margin: 0 auto;
+    padding: remify(150px) 0;
+
+    &.container--large {
+      max-width: remify(1220px);
+    }
+
+    &.container--medium {
+      max-width: remify(920px);
+    }
+
+    &.container--small {
+      max-width: remify(675px);
+    }
+  }
+
+  .title {
+    text-align: center;
+    letter-spacing: .5rem;
+    margin: 0 0 remify(50px);
+    color: $darkGreen;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $white;
+    border-radius: remify(30px);
+    padding: remify(40px);
+
+    @include respond-to(sm) {
+      flex-direction: row;
+    }
+  }
+}

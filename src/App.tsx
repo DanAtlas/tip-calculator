@@ -1,21 +1,48 @@
+import Layout from './components/layout/Layout';
+import FormContent from './components/form-content/FormContent';
+import TipResult from './components/tip-result/TipResult';
+import { useAppContext } from './utils/contextHelper';
+
 function App() {
+  const { tipValues, setTipValues } = useAppContext();
+  
+  const handleSetBill = (billAmount: number) => {
+    const updateBill = {
+      ...tipValues,
+      billAmount,
+    };
+    
+    setTipValues(updateBill);
+  };
+
+  const handleSetPeople = (numPeople: number) => {
+    const updateNumPeople = {
+      ...tipValues,
+      numPeople,
+    };
+    setTipValues(updateNumPeople);
+  };
+
+  const handleResetTipVal = () => {
+    const resetTip = {
+      ...tipValues,
+      billAmount: 0,
+      numPeople: 0,
+      tip: 0,
+    };
+    setTipValues(resetTip);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={`${process.env.PUBLIC_URL}/assets/logo.svg`} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Layout layoutSize='medium'>
+        <FormContent 
+          onSetBill={handleSetBill} 
+          onSetPeople={handleSetPeople} 
+        />
+        <TipResult tipValues={tipValues} onReset={handleResetTipVal} />
+      </Layout>
+    </>
   );
 }
 

@@ -1,0 +1,89 @@
+@import '../../styles/globals.scss';
+
+.tip-result {
+  width: 100%;
+  background-color: $darkGreen;
+  border-radius: remify(10px);
+  padding: remify(30px);
+  margin: remify(40px) 0 0;
+
+  @include respond-to(sm) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: remify(45px) remify(40px) remify(35px);
+    margin: 0 0 0 remify(40px);
+  }
+
+  h1, h2, p {
+    margin: 0;
+  }
+
+  h2 {
+    color: $white;
+    font-size: remify(14px);
+    margin-bottom: remify(5px);
+
+    @include respond-to(sm) {
+      font-size: remify(20px);
+    }
+  }
+
+  p {
+    color: $lightSage;
+    font-size: remify(12px);
+
+    @include respond-to(sm) {
+      font-size: remify(16px);
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: remify(50px);
+    border-radius: remify(5px);
+    font-weight: 700;
+    font-size: remify(16px);
+    margin-top: remify(25px);
+    border: none;
+    background-color: $brand;
+    color: $darkGreen;
+    cursor: pointer;
+
+    @include respond-to(sm) {
+      font-size: remify(20px);
+    }
+
+    &:hover {
+      background-color: $lightGreen;
+    }
+
+    &:disabled {
+      background-color: $sage;
+      opacity: 0.5;
+      color: $lightSage;
+      cursor: not-allowed;
+    }
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: remify(20px);
+
+    @include respond-to(sm) {
+      font-size: remify(45px);
+      margin-bottom: remify(40px);
+    }
+  }
+  
+  &__amount {
+    color: $brand;
+    font-size: remify(25px);
+
+    @include respond-to(sm) {
+      font-size: remify(45px);
+    }
+  }
+}

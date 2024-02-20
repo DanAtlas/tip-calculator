@@ -1,0 +1,29 @@
+@import '../../styles/globals.scss';
+
+.custom-tip {
+  &-input,
+  &--active {
+    border-radius: remify(4px);
+  }
+
+  &-input {
+    width: 100%;
+    height: remify(50px);
+    background-color: $lightestGreen;
+    color: $darkGreen;
+    padding: remify(8px) remify(12px) remify(8px) remify(32px);
+    font-size: remify(24px);
+    border: none;
+    text-align: right;
+    outline: none;
+
+    &:focus {
+      border: remify(2px) solid $brand;
+    }
+
+    &::placeholder {
+      text-align: center;
+      color: $sage;
+    }
+  }
+}

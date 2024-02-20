@@ -9,7 +9,6 @@
     "eject": "react-scripts eject",
     "lint": "react-scripts lint"
   },
-  "prettier": "@mediamonks/prettier-config",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -22,7 +21,6 @@
   },
   "devDependencies": {
     "@mediamonks/eslint-config-react": "^2.0.1",
-    "@mediamonks/prettier-config": "^1.0.1",
     "@types/node": "^16.11.59",
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
@@ -31,7 +29,6 @@
     "eslint": "^8.23.1",
     "eslint-config-react-app": "^7.0.1",
     "lint-staged": "^12.3.7",
-    "prettier": "2.6.2",
     "sass": "^1.54.9",
     "typescript": "^4.8.3"
   },
