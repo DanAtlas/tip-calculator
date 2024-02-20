@@ -1,8 +1,12 @@
+# Splitter - Tip Calculator App
+
+[Tip calculator app](https://danatlas-tip-calculator.netlify.app/) challenge from [Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX) is a Frontend test task for Datarockets.
+
 ## Quick Start
 
 1. Clone this repo:
 
-    `git clone https://github.com/DanAtlas/boilerplate.git`
+    `git clone https://github.com/DanAtlas/tip-calculator.git`
 
 2. Install all packages:
 
